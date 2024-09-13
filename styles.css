@@ -1,0 +1,509 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a1bdb6;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.5s; 
+    /* Smooth transition for hiding and showing */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+    display: block;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.hamburger-icon i {
+    font-size: 24px;
+    color: #f0f0f0; /* Off-white color */
+    line-height: 0.8; /* Adjust line height to bring the lines closer */
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after,
+.hamburger-icon i::before {
+    content: '';
+    display: block;
+    width: 30px; /* Adjust width as needed */
+    height: 4px; /* Thicker lines */
+    background-color: #f0f0f0; /* Off-white color */
+    border-radius: 5px; /* Curved edges */
+    margin: 6px 0; /* Space between lines */
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+    margin-top: 8px; /* Adjust for spacing */
+}
+
+.hamburger-icon::after {
+    margin-bottom: 8px; /* Adjust for spacing */
+}
+
+/* Side Menu (Hamburger Menu) */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #eaf0f6; /* Lighter color matching white and #a2bddc */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Soft shadow for professional look */
+}
+
+.side-menu a {
+    padding: 10px 10px 10px 40px; /* Slightly increased padding for a spacious look */
+    text-decoration: none;
+    font-size: 22px; /* Slightly smaller font size */
+    color: #3b3b3b; /* Darker color for text */
+    display: block;
+    transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.side-menu a:hover {
+    color: #a2bddc; /* Highlight color matching the design */
+    padding-left: 45px; /* Small padding shift for interactive effect */
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: #3b3b3b; /* Darker color for the close button */
+    transition: color 0.3s ease;
+}
+
+.side-menu .close-btn:hover {
+    color: #a2bddc; /* Hover effect for the close button */
+}
+
+/* Logo and Branding */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Added left margin to balance the spacing */
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Reduced margin to bring logo text closer */
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Navigation Links */
+.nav-links a {
+    color: #333333;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007acc;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #e8eff5;
+    text-align: left;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.hero-content {
+    margin-left: 10%;
+    max-width: 800px;
+}
+
+/* Heading Style */
+.hero-content h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #263238;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    position: relative;
+}
+
+/* Dynamic Text Styling */
+.dynamic-text {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 1.0em; /* Adjust based on your font-size and line-height */
+    white-space: nowrap;
+}
+
+/* Animation Styling */
+        
+
+@keyframes text-fade {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Search Bar Styling */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #b3cde3;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:hover {
+    border-color: #a2bddc;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    font-size: 1em;
+    flex: 1;
+    color: #333333;
+    font-weight: 500;
+}
+
+.location-input {
+    display: flex;
+    align-items: center;
+}
+
+.location-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.location-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-btn {
+    background-color: #82b1ff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #5a9cff;
+}
+
+.search-icon {
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Specialties Section */
+.specialties {
+    margin-top: 60px;
+    padding: 0 20px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.specialties h2 {
+    font-size: 1.8em;
+    color: #263238;
+    margin-bottom: 30px;
+}
+
+.specialty-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.specialty-card {
+    text-align: center;
+    width: 140px;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.specialty-card:hover {
+    background-color: #d9e2ec;
+    transform: scale(1.05);
+}
+
+.specialty-card p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333333;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100px;
+    background-color: #e8eff5;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Plus Icon Card */
+.plus-icon-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5f5f0;
+    cursor: pointer;
+}
+
+.plus-icon {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Modal Popup Styling */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+}
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Style for the chat button */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-button i {
+    font-size: 24px;
+}
+
+/* Style for the chat box */
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-footer {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.chat-footer button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.chat-box.hidden {
+    display: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-image img {
+        width: 80%;
+    }
+
+    .search-bar {
+        max-width: 90%;
+    }
+
+    .specialty-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+/* Additional animation for the word "Doctor" */
+.dynamic-text span {
+    display: inline-block;
+    animation: slide-up 0.5s ease-out;
+}

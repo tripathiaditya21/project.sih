@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="navbar">
+        <div class="navbar-left">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+            <div class="logo">
+                <img src="logo-placeholder.png" alt="Healing Hands Logo" class="logo-image">
+                <h1>Healing Hands</h1>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Browse</a>
+            <a href="#">Help</a>
+            <a href="#">Login</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Sidebar Menu (Hamburger) -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <a href="#">Browse</a>
+        <a href="#">Help</a>
+        <a href="#">Login</a>
+        <a href="#">Sign Up</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Find the Best Local <span class="dynamic-text"></span></h1>
+            <h2>Find and book appointments with the best professionals near you.</h2>
+        </div>
+        </div>
+        
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Condition, procedure, doctor...">
+                <div class="location-input">
+                    <input type="text" class="search-input" placeholder="Enter your location">
+                    <span class="location-icon"><img src="location-icon.png" alt="Location"></span>
+                </div>
+                <button class="search-btn">
+                    <i class="search-icon">&#128269;</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Specialties Section -->
+    <div class="specialties">
+        <h2>Top Specialties</h2>
+
+        <!-- First Row -->
+        <div class="specialty-row">
+            <div class="specialty-card">
+                <div class="image-placeholder"></div>
+                <p>Cardiology</p>
+            </div>
+            <div class="specialty-card">
+                <div class="image-placeholder"></div>
+                <p>Dermatology</p>
+            </div>
+            <div class="specialty-card">
+                <div class="image-placeholder"></div>
+                <p>Neurology</p>
+            </div>
+        </div>
+
+        <!-- Second Row with Plus Icon -->
+        <div class="specialty-row">
+            <div class="specialty-card">
+                <div class="image-placeholder"></div>
+                <p>Pediatrics</p>
+            </div>
+            <div class="specialty-card">
+                <div class="image-placeholder"></div>
+                <p>Psychiatry</p>
+            </div>
+            <div class="specialty-card plus-icon-card" onclick="openModal()">
+                <div class="plus-icon">+</div> <!-- Plus Icon for Modal -->
+            </div>
+        </div>
+    </div>
+
+    <div id="chat-button" class="chat-button">
+        <i class="fas fa-comment-dots"></i> <!-- Font Awesome chat icon -->
+    </div>
+    
+    <!-- AI Chat Box -->
+    <div id="chat-box" class="chat-box hidden">
+        <div class="chat-header">
+            <span>Chat with Us</span>
+            <button class="close-chat" onclick="toggleChatBox()">&times;</button>
+        </div>
+        <div class="chat-body">
+            <!-- Chat content will be dynamically inserted here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Modal Popup for More Specialties -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>More Specialties</h3>
+            <ul>
+                <li>Nephrology</li>
+                <li>Gastroenterology</li>
+                <li>Pulmonology</li>
+                <li>Oncology</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <!-- The fetched AI data will be displayed here -->
+        </div>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
