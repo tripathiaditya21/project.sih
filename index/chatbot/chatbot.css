@@ -1,0 +1,53 @@
+body { 
+    color: #421; 
+    font-weight: bold; 
+    font-size: 18px; 
+    font-family: "Courier New"; 
+    background: #a1bdb6;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main { 
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    border: 1px solid #421;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chatbox { 
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #421;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.element {
+    margin: 20px; /* 20px space on all sides */
+}
+
+#input { 
+    width: calc(100% - 80px);
+    border: 1px solid #421;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+#mute-button {
+    padding: 5px 20px;
+    border: none;
+    background-color: #421;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}

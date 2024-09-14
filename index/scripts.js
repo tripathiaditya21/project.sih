@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
         // Scrolling down, hide navbar
-        navbar.style.top = `-${navbarHeight}px`; // Fixed: Use backticks for template literal
+        navbar.style.top = `-${navbarHeight}px`;
     } else {
         // Scrolling up, show navbar
         navbar.style.top = "0";
@@ -15,56 +15,15 @@ window.addEventListener("scroll", function () {
     lastScrollTop = scrollTop;
 });
 
-// Your Gemini AI API Key
-const API_KEY = 'AIzaSyCQ0HIUxVLiWiQpTfYbmVn3dZkd1CBgvGA';
-
-// Base URL for Gemini AI API (replace with the actual API endpoint)
-const BASE_URL = 'https://api.gemini.ai/v1/analyze'; // Replace with actual API endpoint
-
-// Function to open the modal and fetch API data
+// Function to open the modal
 function openModal() {
     document.getElementById("modal").style.display = "flex";
-
-    // Fetch data from the API when the modal is opened
-    fetchAIData();
 }
 
 // Function to close the modal
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
-
-// Function to fetch AI data using the API key
-async function fetchAIData() {
-    try {
-        const response = await fetch(`${BASE_URL}`, {
-            method: 'GET', // Adjust method based on the API documentation
-            headers: {
-                'Authorization': `Bearer ${API_KEY}`, // Send the API key in the header
-                'Content-Type': 'application/json'
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json(); // Parse the JSON response
-
-        // Display the fetched data inside the modal
-        displayModalData(data);
-
-    } catch (error) {
-        console.error('Error fetching AI data:', error);
-    }
-}
-
-// Function to display API data inside the modal
-function displayModalData(data) {
-    const modalContent = document.getElementById('modal-content');
-    modalContent.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`; // Format and display data
-}
-
 
 // Hamburger Menu Toggle
 function toggleMenu() {
@@ -88,15 +47,6 @@ function closeMenuOnClickOutside(event) {
         sideMenu.style.width = "0";
         document.removeEventListener('click', closeMenuOnClickOutside); // Remove the event listener once the menu is closed
     }
-}
-
-// Modal Popup
-function openModal() {
-    document.getElementById("modal").style.display = "flex";
-}
-
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
 }
 
 // Typing Effect for Hero Section
@@ -128,32 +78,34 @@ function type() {
     setTimeout(type, isDeleting ? 50 : 150);
 }
 
-// Ensure this runs only once
 document.addEventListener('DOMContentLoaded', type);
+
 function toggleChatBox() {
-    const chatBox = document.getElementById("chat-box");
-    chatBox.classList.toggle("hidden");
+    const chatBox = document.getElementById('chat-box');
+    chatBox.classList.toggle('visible');
+}
+
+// Handle Enter key press for chat input
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
 }
 
 // Function to handle sending messages
 function sendMessage() {
-    const input = document.getElementById("chat-input");
-    const chatBody = document.querySelector(".chat-body");
-    
-    // Create a new message element
-    const message = document.createElement("div");
-    message.className = "message";
-    message.textContent = input.value;
-    
-    // Add the message to the chat body
-    chatBody.appendChild(message);
-    
-    // Clear the input
-    input.value = "";
-    
-    // Scroll to the bottom
+    const inputElement = document.getElementById('chat-input');
+    const chatBody = document.getElementById('chat-body');
+    const message = inputElement.value.trim();
+
+    if (message === '') return;
+
+    // Display the user's message
+    chatBody.innerHTML += `<div class="user-message">${message}</div>`;
+    inputElement.value = '';
+
+    // Simulate AI response for testing
+    const aiMessage = "This is a simulated AI response.";
+    chatBody.innerHTML += `<div class="ai-message">${aiMessage}</div>`;
     chatBody.scrollTop = chatBody.scrollHeight;
 }
-
-// Event listener for the chat button
-document.getElementById("chat-button").addEventListener("click", toggleChatBox);

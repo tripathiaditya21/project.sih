@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="logo.png" alt="Logo" class="logo"> <!-- Update the logo src -->
+                <div class="user-welcome">
+                    <h1>Welcome, [User's Name]</h1>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="dashboard">
+            <div class="card upcoming-appointments">
+                <h2>Upcoming Appointments</h2>
+                <p>Time: 10:00 AM</p>
+                <p>Date: September 15, 2024</p>
+                <p>Doctor: Dr. Smith</p>
+                <p>Type: Virtual</p>
+                <p>Notes: Prepare health history and medication list.</p>
+                <p>Location: Zoom</p>
+            </div>
+
+            <div class="card past-appointments">
+                <h2>Past Appointments</h2>
+                <ul>
+                    <li>September 1, 2024 - Consultation with Dr. Brown</li>
+                    <li>August 20, 2024 - Follow-up with Dr. Adams</li>
+                    <li>July 15, 2024 - General Check-up with Dr. Lee</li>
+                </ul>
+            </div>
+
+            <div class="card medical-history">
+                <h2>Medical History</h2>
+                <p>Diagnoses: Hypertension, Diabetes Type 2</p>
+                <p>Treatments: Medication A, Lifestyle Changes</p>
+                <p>Prescriptions: Medication B, Insulin</p>
+                <p>Allergies: Penicillin</p>
+            </div>
+
+            <div class="card lab-results">
+                <h2>Lab Results</h2>
+                <p>Latest Test: Blood Test</p>
+                <p>Summary: All results within normal range.</p>
+                <p>Cholesterol: 190 mg/dL</p>
+                <p>Hemoglobin A1c: 6.5%</p>
+            </div>
+
+            <div class="card health-metrics">
+                <h2>Health Metrics</h2>
+                <p>Blood Pressure: 120/80 mmHg</p>
+                <p>Glucose Levels: 90 mg/dL</p>
+                <p>Weight: 75 kg</p>
+                <p>Height: 175 cm</p>
+            </div>
+
+            <div class="card doctor-profiles">
+                <h2>Doctor Profiles</h2>
+                <p>Find your doctor’s availability, qualifications, ratings, and reviews.</p>
+                <ul>
+                    <li>Dr. Smith - Cardiologist</li>
+                    <li>Dr. Brown - General Practitioner</li>
+                    <li>Dr. Adams - Endocrinologist</li>
+                </ul>
+            </div>
+
+            <div class="card prescription-refills">
+                <h2>Prescription Refills</h2>
+                <p>Status: Active</p>
+                <p>Renewal Requests: None</p>
+                <p>Next Refill Due: October 1, 2024</p>
+                <p>Current Medication: Medication B</p>
+            </div>
+
+            <div class="card payment-billing">
+                <h2>Payment & Billing</h2>
+                <p>Outstanding Invoices: $150</p>
+                <p>Payment History: Paid $200 on August 30, 2024</p>
+                <p>Upcoming Due: $75 on September 15, 2024</p>
+                <p>Recent Payment: $50 on September 1, 2024</p>
+            </div>
+
+            <div class="card insurance-details">
+                <h2>Insurance Details</h2>
+                <p>Coverage: Full Coverage</p>
+                <p>Claims: Processed</p>
+                <p>Provider: HealthFirst Insurance</p>
+                <p>Policy Number: 1234567890</p>
+            </div>
+
+            <div class="card reminders-notifications">
+                <h2>Reminders & Notifications</h2>
+                <p>Upcoming Appointment: September 15, 2024</p>
+                <p>Test Due: September 30, 2024</p>
+                <p>Medication Refill: October 1, 2024</p>
+                <p>Health Check-up: October 15, 2024</p>
+            </div>
+
+            <div class="card health-tips">
+                <h2>Health Tips</h2>
+                <p>Tip: Drink plenty of water and exercise regularly.</p>
+                <p>Tip: Get at least 7-8 hours of sleep each night.</p>
+                <p>Tip: Maintain a balanced diet rich in fruits and vegetables.</p>
+            </div>
+
+            <div class="card symptom-checker">
+                <h2>Symptom Checker</h2>
+                <p>Basic tool for self-diagnosis.</p>
+                <p>Input your symptoms to get possible causes and advice.</p>
+                <p>Consult a doctor if symptoms persist or worsen.</p>
+            </div>
+
+            <div class="card emergency-contacts">
+                <h2>Emergency Contacts</h2>
+                <p>Quick access to emergency healthcare providers.</p>
+                <ul>
+                    <li>Emergency Room: 911</li>
+                    <li>Poison Control: 1-800-222-1222</li>
+                    <li>Urgent Care Center: 555-123-4567</li>
+                </ul>
+            </div>
+
+            <!-- <div class="card telemedicine-access">
+                <h2>Telemedicine Access</h2>
+                <p>Direct links for virtual consultations with doctors.</p>
+                <p>Access through secure video conferencing tools.</p>
+                <p>Ensure you have a stable internet connection for the best experience.</p>
+            </div> -->
+
+            <!-- Appointment Booking card at the bottom -->
+            <div class="card appointment-booking">
+                <h2>Appointment Booking</h2>
+                <form>
+                    <label for="appointment-date">Date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                    
+                    <label for="appointment-time">Time:</label>
+                    <input type="time" id="appointment-time" name="appointment-time" required>
+                    
+                    <label for="appointment-type">Type:</label>
+                    <select id="appointment-type" name="appointment-type">
+                        <option value="in-person">In-Person</option>
+                        <option value="virtual">Virtual</option>
+                    </select>
+                   
+                    
+                    <button type="submit">Book Appointment</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            
+            Contact Us:
+<p>
+    Email: support@[yourcompany].com
+    Phone: (123) 456-7890
+    Address: 1234 Main Street, City, State, ZIP</p>
+<p>Follow Us:
+
+    Facebook
+    Twitter
+    Instagram</p>
+
+        </footer>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* General Styles */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.user-welcome h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 250px;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+    background-color: #f0f2f5;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px); /* Full viewport height minus header */
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Blink Effect */
+.card.blink {
+    animation: blink-animation 0.5s ease forwards;
+}
+
+@keyframes blink-animation {
+    0% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #ffeb3b;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+/* Card Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Color Variations */
+.upcoming-appointments { background-color: #e3f2fd; }
+.past-appointments { background-color: #e8f5e9; }
+.medical-history { background-color: #f1f8e9; }
+.lab-results { background-color: #fff3e0; }
+.health-metrics { background-color: #e0f7fa; }
+.appointment-booking { background-color: #fce4ec; }
+.doctor-profiles { background-color: #e8eaf6; }
+.prescription-refills { background-color: #e0f2f1; }
+.payment-billing { background-color: #e3f2fd; }
+.insurance-details { background-color: #fce4ec; }
+.reminders-notifications { background-color: #e3f2fd; }
+.health-tips { background-color: #e8f5e9; }
+.symptom-checker { background-color: #e0f2f1; }
+.emergency-contacts { background-color: #f8bbd0; }
+.telemedicine-access { background-color: #e0f2f1; }
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9em;
+}
+
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .dashboard {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+

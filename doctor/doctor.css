@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif; /* updated font family */
+}
+
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/23/12/medical-1296825_960_720.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #acdac7; /* light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.outer-container {
+  width: 90%;
+  max-width: 900px;
+  background-color: #d2e9e3;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow: hidden;
+  backdrop-filter: blur(8px); /* slight background blur for visual effect */
+}
+
+.inner-container {
+  margin: 0 auto;
+}
+
+.location-specialization-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.location-specialization-section h1 {
+  font-size: 32px;
+  color: #118d49b2; /* light blue */
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* added text shadow */
+}
+
+.location-specialization-section p {
+  font-size: 18px;
+  color: #115f3f96;
+  font-family: cursive;
+  font-weight: 300; /* added font weight */
+}
+
+#location-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px; /* increased font size */
+  font-weight: 300; /* added font weight */
+}
+
+.location-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.location-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* added box shadow */
+}
+
+.location-btn:hover {
+  background-color: #007bff;
+}
+
+.doctor-scroll-container {
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px 0;
+  border-top: 2px solid #ddd;
+  margin-top: 20px;
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doctor-card {
+  background-color: #f5f5f5; /* lighter background color */
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-info {
+  max-width: 70%;
+}
+
+.doctor-info h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500; /* added font weight */
+}
+
+.doctor-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 300; /* added font weight */
+}
+
+.appointment-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* added box shadow */
+}
+
+.appointment-btn:hover {
+  background-color: #218838;
+}
+
+.doctor-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.doctor-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.doctor-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Added new styles */
+
+.text-highlight {
+  color: #007bff; /* light blue */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.text-highlight:hover {
+  color: #0056b3;
+}
+
+.doctor-card:hover .doctor-info h2 {
+  color: #007bff; /* light blue */
+}
+
+.doctor-card:hover .appointment-btn {
+  background-color: #218838;
+}
+
+.location-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.go-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-button:hover {
+  background-color: #0056b3;
+}

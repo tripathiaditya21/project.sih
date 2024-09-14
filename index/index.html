@@ -28,18 +28,34 @@
         <nav class="nav-links">
             <a href="#">Browse</a>
             <a href="#">Help</a>
-            <a href="#">Login</a>
-            <a href="#" class="signup-btn">Sign Up</a>
+            <a href="./login/login2.html">Login</a>
+            <a href="./login/signup.html">Sign Up</a>
         </nav>
     </header>
 
     <!-- Sidebar Menu (Hamburger) -->
     <div id="sideMenu" class="side-menu">
         <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-        <a href="#">Browse</a>
-        <a href="#">Help</a>
-        <a href="#">Login</a>
-        <a href="#">Sign Up</a>
+
+        <!-- User Profile Section -->
+        <!-- <div class="profile-section">
+            <img src="user-profile-placeholder.png" alt="User Profile" class="profile-pic">
+            <p class="user-name">John Doe</p>
+        </div> -->
+
+        <!-- Sidebar Links in Boxes -->
+        <div class="menu-box">
+            <a href="#">User Profile</a>
+        </div>
+        <div class="menu-box">
+            <a href="#">Doctors Profile</a>
+        </div>
+        <div class="menu-box">
+            <a href="#">Settings</a>
+        </div>
+        <div class="menu-box">
+            <a href="#">Payment History</a>
+        </div>
     </div>
 
     <!-- Hero Section -->
@@ -102,24 +118,29 @@
         </div>
     </div>
 
-    <div id="chat-button" class="chat-button">
+    <div id="chat-button" class="chat-button" onclick="toggleChatBox()">
         <i class="fas fa-comment-dots"></i> <!-- Font Awesome chat icon -->
     </div>
-    
-    <!-- AI Chat Box -->
-    <div id="chat-box" class="chat-box hidden">
+
+    AI Chat Box
+    <!-- <div id="chat-box" class="chat-box hidden">
         <div class="chat-header">
             <span>Chat with Us</span>
             <button class="close-chat" onclick="toggleChatBox()">&times;</button>
         </div>
-        <div class="chat-body">
+        <div id="chat-body" class="chat-body"> -->
             <!-- Chat content will be dynamically inserted here -->
-        </div>
+        <!-- </div>
         <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Type a message...">
+            <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
             <button onclick="sendMessage()">Send</button>
         </div>
-    </div>
+    </div> -->
+    <a href="chatbot/chatbot.html">
+        <div id="chat-button" class="chat-button">
+            <i class="fas fa-comment-dots"></i> <!-- Font Awesome chat icon -->
+        </div>
+    </a>
 
     <!-- Modal Popup for More Specialties -->
     <div id="modal" class="modal hidden">
