@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Appointment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+  <div class="outer-container">
+    <div class="inner-container">
+      <div class="location-specialization-section">
+        <h1>Find the Best Doctors Near You</h1>
+        <p>Enter your location or use your current location:</p>
+        <input type="text" placeholder="Enter your location" id="location-input">
+        <div class="location-buttons">
+          <button class="location-btn" id="use-location-btn">Use Current Location</button>
+          <button class="location-btn" id="view-doctors-btn">View Doctors</button>
+        </div>
+      </div>
+
+      <div class="doctor-scroll-container hidden" id="doctor-scroll-container">
+        <div class="doctor-list">
+          <div class="doctor-card">
+            <div class="doctor-image">
+              <img src="photo/ak.png" alt="Dr. A K Sharma">
+            </div>
+            <div class="doctor-info">
+              <h2>Dr. A K Sharma</h2>
+              <p class="specialization">Cardiology</p>
+              <p class="location">Vijayawada, Andhra Pradesh - 5 km</p>
+              <p class="experience">Experience: 15 years</p>
+              <p class="cost">Cost per Appointment: ₹1500</p>
+              <p class="rating">Rating: ★★★★☆ (4.8)</p>
+              <p class="contact">Contact: 0866 247 3000</p>
+            </div>
+            <button class="appointment-btn">Book Appointment</button>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-image">
+              <img src="../photo/sneha.png" alt="Dr. Sneha Gupta">
+            </div>
+            <div class="doctor-info">
+              <h2>Dr. Sneha Gupta</h2>
+              <p class="specialization">neuro</p>
+              <p class="location">Vijayawada, Andhra Pradesh - 10 km</p>
+              <p class="experience">Experience: 12 years</p>
+              <p class="cost">Cost per Appointment: ₹1200</p>
+              <p class="rating">Rating: ★★★★★ (4.9)</p>
+              <p class="contact">Contact: 0866 241 5757</p>
+            </div>
+            <button class="appointment-btn">Book Appointment</button>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-image">
+              <img src="photo/pranav.png" alt="Dr. Pranav Das">
+            </div>
+            <div class="doctor-info">
+              <h2>Dr. Pranav Das</h2>
+              <p class="specialization">Orthopedics</p>
+              <p class="location">Hyderabad, Telangana - 7 km</p>
+              <p class="experience">Experience: 10 years</p>
+              <p class="cost">Cost per Appointment: ₹1000</p>
+              <p class="rating">Rating: ★★★★☆ (4.6)</p>
+              <p class="contact">Contact: 040 230 4848</p>
+            </div>
+            <button class="appointment-btn">Book Appointment</button>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-image">
+              <img src="photo/priya.png" alt="Dr. Priya Nair">
+            </div>
+            <div class="doctor-info">
+              <h2>Dr. Priya Nair</h2>
+              <p class="specialization">Dermatology</p>
+              <p class="location">Chennai, Tamil Nadu - 8 km</p>
+              <p class="experience">Experience: 8 years</p>
+              <p class="cost">Cost per Appointment: ₹800</p>
+              <p class="rating">Rating: ★★★★★ (4.7)</p>
+              <p class="contact">Contact: 044 220 3333</p>
+            </div>
+            <button class="appointment-btn">Book Appointment</button>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-image">
+              <img src="photo/neha.png" alt="Dr. Neha Verma">
+            </div>
+            <div class="doctor-info">
+              <h2>Dr. Neha Verma</h2>
+              <p class="specialization">Neurology</p>
+              <p class="location">Delhi - 12 km</p>
+              <p class="experience">Experience: 18 years</p>
+              <p class="cost">Cost per Appointment: ₹2000</p>
+              <p class="rating">Rating: ★★★★★ (4.9)</p>
+              <p class="contact">Contact: 011 2345 7899</p>
+            </div>
+            <button class="appointment-btn">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="doctor.js"></script>
+</body>
+</html>
