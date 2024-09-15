@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0FFFF; /* Pale blue background */
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #B0E0E6; /* Light blue background */
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin-top: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select, input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Pale blue background for input fields */
+    color: #333; /* Darker text for readability */
+}
+
+input:focus, select:focus {
+    outline: 2px solid #87CEFA; /* Light sky-blue outline on focus */
+}
+
+/* Change background color to grey when user input is detected */
+input:not(:placeholder-shown), select:not(:placeholder-shown) {
+    background-color: #d3d3d3; /* Light grey background for filled inputs */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #87CEFA; /* Light sky-blue background for button */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #4682B4; /* Slightly darker blue on hover */
+}
+
+.hidden {
+    display: none;
+}

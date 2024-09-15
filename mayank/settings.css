@@ -1,0 +1,148 @@
+/* styles.css */
+
+/* Define color variables */
+:root {
+    --pale-skyblue: #e8eff5; /* Pale Sky Blue */
+    --light-skyblue: #f0f4f8; /* Very Light Pale Sky Blue */
+    --dark-skyblue: #cce0ff; /* Darker Pale Sky Blue */
+    --highlight-blue: #007bff; /* Highlight color for interactive elements */
+    --text-color: #333; /* Dark text color */
+    --border-color: #ccc; /* Border color */
+    --input-background: #f0f0f0; /* Light grey background for inputs */
+    --input-focus-background: #ffffff; /* White background when input is focused */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for sections */
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--pale-skyblue);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light-skyblue);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+header {
+    background-color: #a1bdb6;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    color: #23e4b4;
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+    background-color: var(#a1bdb6); /* Light background for sections */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+h2 {
+    border-bottom: 2px solid var(--highlight-blue);
+    padding-bottom: 5px;
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--highlight-blue);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-background);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: var(--input-focus-background);
+    outline: none;
+    border-color: var(--highlight-blue);
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--highlight-blue);
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a1bdb6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li a {
+    color: var(--highlight-blue);
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: var(--highlight-blue);
+}
+
+a:hover {
+    text-decoration: underline;
+}

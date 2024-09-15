@@ -1,0 +1,136 @@
+/* styles.css */
+
+/* Define color variables */
+:root {
+    --pale-blue: #e8eff5; /* Pale Blue */
+    --light-blue: #f0f4f8; /* Very light Pale Blue */
+    --darker-blue: #d0e1e8; /* Slightly darker Pale Blue */
+    --highlight-blue: #007bff; /* Highlight color for interactive elements */
+    --text-color: #333; /* Dark text color */
+    --border-color: #ccc; /* Border color */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Box shadow color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--pale-blue);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White for content area */
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--darker-blue);
+    border-radius: 8px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.doctor-info h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-blue);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    flex: 1 1 calc(50% - 20px);
+    background-color: var(--light-blue);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+h2 {
+    border-bottom: 2px solid var(--highlight-blue);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.stats, .summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stat-item, .summary div {
+    background-color: var(--light-blue);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+input[type="date"], input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 10px;
+    background-color: var(--darker-blue);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.footer-content a {
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}

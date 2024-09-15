@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Appointment Management Dashboard</title>
+    <link rel="stylesheet" href="paynow.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img src="profile-picture.jpg" alt="Doctor's Profile Picture" class="profile-pic">
+                <div class="doctor-info">
+                    <h1>Dr. John Smith</h1>
+                    <p>September 13, 2024</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#patient-records">Patient Records</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="overview" class="overview">
+                <h2>Overview</h2>
+                <div class="stats">
+                    <div class="stat-item">Today’s Appointments: <span>4</span></div>
+                    <div class="stat-item">Upcoming Appointments: <span>8</span></div>
+                    <div class="stat-item">Missed Appointments: <span>2</span></div>
+                    <div class="stat-item">Total Appointments This Week: <span>20</span></div>
+                </div>
+            </section>
+
+            <section id="daily-summary" class="daily-summary">
+                <h2>Daily Appointments Summary</h2>
+                <label for="date-selector">Select Date:</label>
+                <input type="date" id="date-selector">
+                <div class="summary">
+                    <div>Total Appointments: <span id="total-appointments">25</span></div>
+                    <div>Confirmed: <span id="confirmed">20</span></div>
+                    <div>Pending: <span id="pending">4</span></div>
+                    <div>Canceled: <span id="canceled">1</span></div>
+                </div>
+            </section>
+
+            <section id="patient-records" class="patient-records">
+                <h2>Patient Records</h2>
+                <input type="text" id="search-patient" placeholder="Search for a patient">
+                <div id="patient-list">
+                    <!-- Patient list will be dynamically generated -->
+                </div>
+            </section>
+
+            
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <a href="#contact-support">Contact Support</a>
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms-of-service">Terms of Service</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="paynow.js"></script>
+</body>
+</html>

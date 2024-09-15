@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 style="color: rgb(20, 20, 20);">Account Settings</h2>
+
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#personal-info">Personal Information</a></li>
+                    <li><a href="#password-management">Password Management</a></li>
+                    <li><a href="#address-book">Address Book</a></li>
+                    <li><a href="#notification-preferences">Notification Preferences</a></li>
+                    <li><a href="#privacy-settings">Privacy Settings</a></li>
+                    <li><a href="#security-settings">Security Settings</a></li>
+                    <li><a href="#help-support">Help and Support</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Existing sections -->
+
+            <section id="personal-info" class="settings-section">
+                <h2>Personal Information</h2>
+                <form id="personal-info-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-address">Email Address:</label>
+                        <input type="email" id="email-address" name="email-address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="tel" id="phone-number" name="phone-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-picture">Profile Picture:</label>
+                        <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+                    </div>
+                </form>
+            </section>
+
+            <section id="password-management" class="settings-section">
+                <h2>Password Management</h2>
+                <form id="password-management-form">
+                    <div class="form-group">
+                        <label for="current-password">Current Password:</label>
+                        <input type="password" id="current-password" name="current-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password:</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="enable-2fa" name="enable-2fa">
+                        <label for="enable-2fa">Enable Two-Factor Authentication</label>
+                    </div>
+                </form>
+            </section>
+
+            <section id="address-book" class="settings-section">
+                <h2>Address Book</h2>
+                <form id="address-book-form">
+                    <div class="form-group">
+                        <label for="address">Add/Edit Shipping Addresses:</label>
+                        <textarea id="address" name="address" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="addAddress()">Add Address</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="default-address">Set Default Address:</label>
+                        <select id="default-address" name="default-address">
+                            <option value="">Select Address</option>
+                            <!-- Options will be dynamically generated -->
+                        </select>
+                    </div>
+                </form>
+            </section>
+
+            <section id="notification-preferences" class="settings-section">
+                <h2>Notification Preferences</h2>
+                <form id="notification-preferences-form">
+                    <div class="form-group">
+                        <input type="checkbox" id="email-notifications" name="email-notifications">
+                        <label for="email-notifications">Email Notifications (order updates, promotions, etc.)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="sms-notifications" name="sms-notifications">
+                        <label for="sms-notifications">SMS Notifications</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="push-notifications" name="push-notifications">
+                        <label for="push-notifications">Push Notifications (if applicable)</label>
+                    </div>
+                </form>
+            </section>
+
+            <section id="privacy-settings" class="settings-section">
+                <h2>Privacy Settings</h2>
+                <form id="privacy-settings-form">
+                    <div class="form-group">
+                        <label for="profile-visibility">Manage Who Can See Your Information:</label>
+                        <select id="profile-visibility" name="profile-visibility">
+                            <option value="public">Public</option>
+                            <option value="friends">Friends</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-sharing">Data Sharing Preferences:</label>
+                        <select id="data-sharing" name="data-sharing">
+                            <option value="all">Share with all</option>
+                            <option value="none">Do not share</option>
+                            <option value="selective">Share selectively</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+
+            <section id="security-settings" class="settings-section">
+                <h2>Security Settings</h2>
+                <form id="security-settings-form">
+                    <div class="form-group">
+                        <input type="checkbox" id="enable-2fa-security" name="enable-2fa-security">
+                        <label for="enable-2fa-security">Enable Two-Factor Authentication</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="recent-logins">Review Recent Login Activity:</label>
+                        <textarea id="recent-logins" name="recent-logins" rows="4" readonly>Recent login details will be displayed here.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="security-alerts" name="security-alerts">
+                        <label for="security-alerts">Security Alerts and Notifications</label>
+                    </div>
+                </form>
+            </section>
+
+            <section id="help-support" class="settings-section">
+                <h2>Help and Support</h2>
+                <div class="form-group">
+                    <h3>Help Center Links</h3>
+                    <ul>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#user-guides">User Guides</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <h3>Contact Support</h3>
+                    <p>If you need assistance, please contact our support team:</p>
+                    <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+            </section>
+
+           
+
+            <section id="logout" class="settings-section">
+                <h2>Logout</h2>
+                <p>To securely log out of your account, click the button below:</p>
+                <button type="button" onclick="logout()">Logout</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

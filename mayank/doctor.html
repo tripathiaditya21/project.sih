@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account as Doctor </title>
+    <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Account as Doctor</h1>
+        <form id="doctor-form">
+            <section>
+                <h2>Personal and Professional Information</h2>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Dr. John Smith, MD" required>
+
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" placeholder="Cardiology" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="john.smith@example.com" required>
+
+                <label for="contact-form">Enable Contact Form:</label>
+                <input type="checkbox" id="contact-form" name="contact-form">
+
+                <label for="address">Office Address:</label>
+                <input type="text" id="address" name="address" placeholder="123 Main St, Anytown, USA" required>
+
+                <label for="profile-picture">Professional Profile Picture:</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+            </section>
+
+            <section>
+                <h2>Educational Background</h2>
+                <label for="degrees">Degrees:</label>
+                <textarea id="degrees" name="degrees" placeholder="Medical School, Residency, Fellowship" required></textarea>
+
+                <label for="degrees-file">Attach Degree Documents:</label>
+                <input type="file" id="degrees-file" name="degrees-file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+
+                <label for="certifications">Certifications:</label>
+                <textarea id="certifications" name="certifications" placeholder="Board Certifications, Additional Training" required></textarea>
+
+                <label for="certifications-file">Attach Certification Documents:</label>
+                <input type="file" id="certifications-file" name="certifications-file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+            </section>
+
+            <section>
+                <h2>Experience and Professional History</h2>
+                <label for="work-history">Work History:</label>
+                <textarea id="work-history" name="work-history" placeholder="Current and Previous Positions" required></textarea>
+
+                <label for="research-publications">Research and Publications:</label>
+                <textarea id="research-publications" name="research-publications" placeholder="Research Contributions, Publications, Presentations" required></textarea>
+            </section>
+
+            <section>
+                <h2>Services Offered</h2>
+                <label>Medical Services:</label>
+                <input type="text" id="medical-services" name="medical-services" placeholder="List of Services" required>
+
+                <label>Patient Types:</label>
+                <input type="checkbox" id="adults" name="patient-types" value="Adults"> Adults
+                <input type="checkbox" id="children" name="patient-types" value="Children"> Children
+                <input type="checkbox" id="both" name="patient-types" value="Both"> Both
+
+                <label for="insurance">Insurance and Payment Information:</label>
+                <textarea id="insurance" name="insurance" placeholder="Accepted Insurance Plans, Payment Options" required></textarea>
+            </section>
+
+            <section>
+                <h2>Credentials and Affiliations</h2>
+                <label for="professional-memberships">Professional Memberships:</label>
+                <textarea id="professional-memberships" name="professional-memberships" placeholder="Memberships in Professional Organizations" required></textarea>
+
+                <label for="licensing-info">Licensing Information:</label>
+                <textarea id="licensing-info" name="licensing-info" placeholder="State/National Licenses, Status, Expiration Dates" required></textarea>
+            </section>
+
+            <section>
+                <h2>Patient Information</h2>
+                <label for="appointment-scheduling">Appointment Scheduling:</label>
+                <input type="checkbox" id="appointment-scheduling" name="appointment-scheduling" value="Enable"> Enable Online Scheduling
+
+                <label for="patient-portal">Patient Portal URL:</label>
+                <input type="url" id="patient-portal" name="patient-portal" placeholder="https://example.com/portal">
+
+                <label for="patient-reviews">Display Patient Reviews:</label>
+                <input type="checkbox" id="patient-reviews" name="patient-reviews">
+            </section>
+
+            <section>
+                <h2>Privacy and Security</h2>
+                <label for="compliance-info">Compliance Information:</label>
+                <textarea id="compliance-info" name="compliance-info" placeholder="Compliance with Privacy Laws" required></textarea>
+
+                <label for="data-security">Data Security Measures:</label>
+                <textarea id="data-security" name="data-security" placeholder="Details on Data Protection" required></textarea>
+            </section>
+
+            <section>
+                <h2>Additional Resources</h2>
+                <label for="educational-materials">Educational Materials:</label>
+                <textarea id="educational-materials" name="educational-materials" placeholder="Articles, Blogs, Videos" required></textarea>
+
+                <label for="faqs">FAQs:</label>
+                <textarea id="faqs" name="faqs" placeholder="Frequently Asked Questions" required></textarea>
+
+                <label for="contact-form-feature">Enable Contact Form or Chat Feature:</label>
+                <input type="checkbox" id="contact-form-feature" name="contact-form-feature" value="Enable">
+            </section>
+
+            <section>
+                <h2>Marketing and Outreach</h2>
+                <label for="social-media-links">Social Media Links:</label>
+                <textarea id="social-media-links" name="social-media-links" placeholder="LinkedIn, Twitter, Facebook, Instagram"></textarea>
+
+                <label for="newsletter-signup">Enable Newsletter Signup:</label>
+                <input type="checkbox" id="newsletter-signup" name="newsletter-signup">
+            </section>
+
+            <section>
+                <h2>Legal and Disclaimers</h2>
+                <label for="disclaimer">Disclaimer:</label>
+                <textarea id="disclaimer" name="disclaimer" placeholder="Legal Disclaimers" required></textarea>
+
+                <label for="terms-of-service">Terms of Service URL:</label>
+                <input type="url" id="terms-of-service" name="terms-of-service" placeholder="https://example.com/terms">
+
+                <label for="privacy-policy">Privacy Policy URL:</label>
+                <input type="url" id="privacy-policy" name="privacy-policy" placeholder="https://example.com/privacy">
+            </section>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="doctor.js"></script>
+</body>
+</html>
