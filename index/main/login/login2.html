@@ -10,7 +10,8 @@
     <div class="container">
         <h1>Welcome to Healing Hands</h1>
         <div class="login-box">
-            <div id="loginForm">
+            <!-- Corrected form element with GET method -->
+            <form id="loginForm" action="../loginaf/index.html" method="get" onsubmit="return handleLogin(event)">
                 <div class="select-role">
                     <label for="role">Login as:</label>
                     <select id="role" name="role" aria-label="Select role">
@@ -29,11 +30,13 @@
                     <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
                 </div>
-                <div class="actions"><a href="../../index.html">
-                    <button>Login</button></a>
-                    <a target="_blank" href="forgot-password.html">Forgot Password?</a>
+
+                <!-- Button for form submission -->
+                <div class="actions">
+                    <button type="submit">Login</button>
+                    <a target="_blank" href="./forget/forget.html">Forgot Password?</a>
                 </div>
-            </div>
+            </form>
 
             <div class="switch-page">
                 <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
@@ -41,8 +44,26 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
     <script src="app.js"></script>
+    <script>
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from submitting the default way
+            
+            // Get the input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation (you can enhance this)
+            if (username && password) {
+                // Redirect to the next page
+                window.location.href = "../loginaf/index.html";
+            } else {
+                alert("Please fill in both username and password.");
+            }
+
+            return false; // Prevent default form submission
+        }
+    </script>
 </body>
 </html>

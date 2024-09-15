@@ -16,7 +16,7 @@ body {
 
 .container {
     text-align: center;
-    padding: 20px; /* Added padding for spacing inside the container */
+    padding: 20px; /* Padding inside the container */
 }
 
 h1 {
@@ -27,21 +27,21 @@ h1 {
 
 .login-box, .signup-box {
     background-color: #29293a;
-    padding: 40px; /* Increased padding inside the login/signup boxes for better spacing */
+    padding: 40px; /* Padding inside the sign-up box */
     border-radius: 10px;
     width: 300px;
-    box-shadow: 0 4px 15px sky rgb(154, 226, 244);
+    box-shadow: 0 4px 15px rgba(154, 226, 244, 0.7);
     animation: fadeInUp 1.5s ease-out;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 30px; /* Increased margin between input groups */
+    margin-bottom: 30px; /* Margin between input groups */
 }
 
 input {
     width: 100%;
-    padding: 12px; /* Increased padding inside input for better click area */
+    padding: 12px; /* Padding inside input fields */
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #fff;
@@ -72,7 +72,7 @@ input:not(:placeholder-shown) ~ label {
 button {
     background-color: #007bff;
     border: none;
-    padding: 12px 20px; /* Added consistent padding inside the button */
+    padding: 12px 20px; /* Padding inside the button */
     color: white;
     cursor: pointer;
     width: 100%;
@@ -104,7 +104,7 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Animation */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
