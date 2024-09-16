@@ -6,7 +6,10 @@
     <title>Doctor Appointment Booking</title>
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to the CSS stylesheet -->
     <link rel="stylesheet" href="style22.css">
+    <!-- Include Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500&display=swap">
 </head>
 <body>
 
@@ -20,16 +23,15 @@
             </div>
         </div>
 
-            <div class="logo">
-                <img src="logo-placeholder.png" alt="Healing Hands Logo" class="logo-image">
-                <h1>Healing Hands</h1>
-            </div>
+        <div class="logo">
+            <img src="logo-placeholder.png" alt="Healing Hands Logo" class="logo-image">
+            <h1>Healing Hands</h1>
         </div>
         <nav class="nav-links">
             <a href="#">Browse</a>
             <a href="../login/help/help.html">Help</a>
-             <a href="../login/login2.html">Login</a>
-            <a href="../login/signup.html">Sign Up</a> 
+            <a href="../../main/login/login2.html">Login</a>
+            <a href="../../main/login/signup.html">Sign up</a>
         </nav>
     </header>
 
@@ -38,17 +40,11 @@
         <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
 
         <!-- User Profile Section -->
-        <!-- <div class="profile-section">
-            <img src="user-profile-placeholder.png" alt="User Profile" class="profile-pic">
-            <p class="user-name">John Doe</p>
-        </div> -->
+        
 
         <!-- Sidebar Links in Boxes -->
         <div class="menu-box">
-            <a href="#">User Profile</a>
-        </div>
-        <div class="menu-box">
-            <a href="#">Doctors Profile</a>
+            <a href="../../../dashboard/dashboard.html">User Profile</a>
         </div>
         <div class="menu-box">
             <a href="#">Settings</a>
@@ -64,21 +60,19 @@
             <h1>Find the Best Local <span class="dynamic-text"></span></h1>
             <h2>Find and book appointments with the best professionals near you.</h2>
         </div>
-        </div>
+    </div>
         
-
-        <!-- Search Section -->
-        <div class="search-section">
-            <div class="search-bar">
-                <input type="text" class="search-input" placeholder="Condition, procedure, doctor...">
-                <div class="location-input">
-                    <input type="text" class="search-input" placeholder="Enter your location">
-                    <span class="location-icon"><img src="location-icon.png" alt="Location"></span>
-                </div>
-                <button class="search-btn">
-                    <i class="search-icon">&#128269;</i>
-                </button>
+    <!-- Search Section -->
+    <div class="search-section">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Condition, procedure, doctor...">
+            <div class="location-input">
+                <input type="text" class="search-input" placeholder="Enter your location">
+                <span class="location-icon"><img src="location-icon.png" alt="Location"></span>
             </div>
+            <button class="search-btn">
+                <i class="search-icon">&#128269;</i>
+            </button>
         </div>
     </div>
 
@@ -89,15 +83,15 @@
         <!-- First Row -->
         <div class="specialty-row">
             <div class="specialty-card">
-                <div class="image-placeholder"></div>
+                <img src="./secialitiyph/Cardiology.webp" alt="Cardiology" class="image-placeholder">
                 <p>Cardiology</p>
             </div>
             <div class="specialty-card">
-                <div class="image-placeholder"></div>
+                <img src="./secialitiyph/Dermatology.webp" alt="Dermatology" class="image-placeholder">
                 <p>Dermatology</p>
             </div>
             <div class="specialty-card">
-                <div class="image-placeholder"></div>
+                <img src="./secialitiyph/Neurology.webp" alt="Neurology" class="image-placeholder">
                 <p>Neurology</p>
             </div>
         </div>
@@ -105,11 +99,11 @@
         <!-- Second Row with Plus Icon -->
         <div class="specialty-row">
             <div class="specialty-card">
-                <div class="image-placeholder"></div>
+                <img src="./secialitiyph/pediatrics.webp" alt="Pediatrics" class="image-placeholder">
                 <p>Pediatrics</p>
             </div>
             <div class="specialty-card">
-                <div class="image-placeholder"></div>
+                <img src="./secialitiyph/Psychiatry.webp" alt="Psychiatry" class="image-placeholder">
                 <p>Psychiatry</p>
             </div>
             <div class="specialty-card plus-icon-card" onclick="openModal()">
@@ -118,50 +112,65 @@
         </div>
     </div>
 
-    <div id="chat-button" class="chat-button" onclick="toggleChatBox()">
-        <i class="fas fa-comment-dots"></i> <!-- Font Awesome chat icon -->
-    </div>
-
-    AI Chat Box
-    <!-- <div id="chat-box" class="chat-box hidden">
-        <div class="chat-header">
-            <span>Chat with Us</span>
-            <button class="close-chat" onclick="toggleChatBox()">&times;</button>
-        </div>
-        <div id="chat-body" class="chat-body"> -->
-            <!-- Chat content will be dynamically inserted here -->
-        <!-- </div>
-        <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div> -->
-    <a href="chatbot/chatbot.html">
-        <div id="chat-button" class="chat-button">
-            <i class="fas fa-comment-dots"></i> <!-- Font Awesome chat icon -->
-        </div>
-    </a>
-
     <!-- Modal Popup for More Specialties -->
     <div id="modal" class="modal hidden">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h3>More Specialties</h3>
-            <ul>
-                <li>Nephrology</li>
-                <li>Gastroenterology</li>
-                <li>Pulmonology</li>
-                <li>Oncology</li>
-            </ul>
+            <!-- Scrollable box containing specialties -->
+            <div class="specialty-scroll-container">
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Nephro.webp" alt="Nephrology" class="image-placeholder">
+                    <p>Nephrology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Gastroenterology.webp" alt="Gastroenterology" class="image-placeholder">
+                    <p>Gastroenterology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Pulmono.webp" alt="Pulmonology" class="image-placeholder">
+                    <p>Pulmonology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Oncology.webp" alt="Oncology" class="image-placeholder">
+                    <p>Oncology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Rheumatology.webp" alt="Rheumatology" class="image-placeholder">
+                    <p>Rheumatology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Endocrinology.webp" alt="Endocrinology" class="image-placeholder">
+                    <p>Endocrinology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Orthopedics.webp" alt="Orthopedics" class="image-placeholder">
+                    <p>Orthopedics</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Ophthalmology.webp" alt="Ophthalmology" class="image-placeholder">
+                    <p>Ophthalmology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/ENT.webp" alt="ENT" class="image-placeholder">
+                    <p>ENT</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Hematology.webp" alt="Hematology" class="image-placeholder">
+                    <p>Hematology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Allergy & Immunology.webp" alt="Allergy & Immunology" class="image-placeholder">
+                    <p>Allergy & Immunology</p>
+                </div>
+                <div class="specialty-card">
+                    <img src="./secialitiyph/Urology.webp" alt="Urology" class="image-placeholder">
+                    <p>Urology</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="modal" class="modal">
-        <div id="modal-content" class="modal-content">
-            <!-- The fetched AI data will be displayed here -->
-        </div>
-        <button onclick="closeModal()">Close</button>
-    </div>
-
+    
     <!-- JavaScript -->
     <script src="script1.js"></script>
 </body>

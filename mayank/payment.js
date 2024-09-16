@@ -26,7 +26,8 @@ document.getElementById('paymentForm').addEventListener('submit', function(event
         return;
     }
 
-    // Send data to backend API
+    // Backend call commented out
+    /*
     fetch('https://your-backend-api.com/process-payment', {
         method: 'POST',
         headers: {
@@ -42,6 +43,7 @@ document.getElementById('paymentForm').addEventListener('submit', function(event
         console.error('Error:', error);
         alert('Payment failed. Please try again.');
     });
+    */
 });
 
 document.getElementById('paymentMethod').addEventListener('change', function() {

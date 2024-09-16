@@ -1,0 +1,127 @@
+    /* styles.css */
+
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #82c1d1; /* Light grey background for better readability */
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: hsl(206, 48%, 86%); /* White background for the form container */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333; /* Darker color for better readability */
+    }
+
+    /* Form styling */
+    .payment-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .patient-info, .order-summary, .payment-method, .payment-info, .terms {
+        margin-bottom: 20px;
+    }
+
+    .patient-info label, .payment-method label, .payment-info label, .terms label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555; /* Slightly lighter than the heading for contrast */
+    }
+
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc; /* Light grey border for inputs */
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    button.pay-btn {
+        padding: 10px 20px;
+        background-color: #007bff; /* Bootstrap primary blue for buttons */
+        color: #ffffff; /* White text for contrast */
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button.pay-btn:disabled {
+        background-color: #91a7f4; /* Grey for disabled state */
+        cursor: not-allowed;
+    }
+
+    button.pay-btn:hover:not(:disabled) {
+        background-color: #0056b3; /* Darker blue for hover effect */
+    }
+
+    /* Payment Method Selection */
+    .payment-method h3, .payment-info h3 {
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: #333; /* Darker color for headings */
+    }
+
+    .payment-method label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* QR Code Section */
+    #upi-qr-code {
+        text-align: center;
+    }
+
+    #qr-code-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Secure Info */
+    .secure-info {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e0e0e0; /* Light grey for secure info background */
+        border-radius: 4px;
+        text-align: center;
+        font-size: 14px;
+        color: #333; /* Darker text color for readability */
+    }
+
+    /* Loader */
+    #loader {
+        text-align: center;
+        font-size: 18px;
+        color: #007bff; /* Blue color for loader text */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+            padding: 15px;
+        }
+
+        button.pay-btn {
+            width: 100%;
+        }
+    }
