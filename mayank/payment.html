@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <h2>Book Apointment</h2>
-        <form id="paymentForm">
+        <h2>Book Appointment</h2>
+        <form id="paymentForm" action="./paymentpage.html" method="GET">
             <div class="form-group">
                 <label for="name">Patient Name</label>
                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -44,9 +44,7 @@
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="123">
             </div>
-            <a href="./paymentpage.html">
             <button type="submit">Book Appointment</button>
-            </a>
         </form>
     </div>
     <script src="payment.js"></script>

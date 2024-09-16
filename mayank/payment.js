@@ -1,4 +1,6 @@
 document.getElementById('paymentForm').addEventListener('submit', function(event) {
+    // Backend call and event.preventDefault are commented out, so it will now allow form submission
+    /*
     event.preventDefault();
 
     // Retrieve form data
@@ -27,7 +29,6 @@ document.getElementById('paymentForm').addEventListener('submit', function(event
     }
 
     // Backend call commented out
-    /*
     fetch('https://your-backend-api.com/process-payment', {
         method: 'POST',
         headers: {
