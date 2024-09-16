@@ -138,22 +138,24 @@ body {
 /* Logo and Branding */
 .logo {
     display: flex;
-    align-items: left;
+    align-items: center; /* Change from left to center for vertical alignment */
     margin-left: 10px;
 }
 
 .logo-image {
-    width: 40px;
-    height: 40px;
+    width: 60px; /* Increase the width for a larger logo */
+    height: 60px; /* Increase the height proportionally */
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px; /* Add more space between the image and the text */
 }
 
 .logo h1 {
-    font-size: 1.5em;
+    font-size: 2em; /* Increase the font size */
     font-weight: bold;
     color: #4b636e;
+    margin: 0; /* Ensure no extra margin is added */
 }
+
 
 /* Navigation Links */
 .nav-links a {
